@@ -11,4 +11,7 @@ class Tracker:
     self.db.create("tiny_habits_tracker")
 
   def add_habit(self, name):
-    self.db.add("habit", name)
+    self.db.add("habits", name=name)
+
+  def habits(self):
+    return self.db.fetch_all("habits")
