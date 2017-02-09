@@ -1,0 +1,61 @@
+## Features:
+
+- Create a new habit
+- List current habits
+- Mark a habit as completed on a certain day
+- List how many times a habit has been completed since the habit was first added and in how many days
+- Remove a habit
+- Pause a habit
+- Update a habit
+
+## UX sketches:
+
+tinyhabit --new
+Time to add a new habit...
+After I...
+[user input]
+I will
+[user input]
+
+tinyhabit --complete
+Please choose which habit you'd like to mark as complete for today:
+
+[1] After I eat, I will dance
+[2] After I drink, I will jump
+
+Enter habit number...
+[user input]
+
+Great job! 'After I eat, I will dance' was marked as completed at 16:44 today.
+
+tinyhabit --list
+After I eat, I will dance
+After I drink, I will jump
+
+tinyhabit --stats
+Please pick a habit to view:
+
+[1] After I eat, I will dance
+[2] After I drink, I will jump
+
+Enter habit number...
+[user input]
+
+You have completed this habit 4 times in 20 days. You've missed 18 days. Keep going!
+
+tinyhabit --remove
+Please choose which habit you'd like to remove:
+
+[1] After I eat, I will dance
+[2] After I drink, I will jump
+
+Enter habit number...
+[user input]
+
+Are you sure you want to remove 'After I eat, I will dance' [y/n]?
+[user input]
+
+## Schema:
+habit has many completions
+completion belongs to one habit
+
