@@ -40,9 +40,9 @@ class TinyHabitsTrackerTest(unittest.TestCase):
 
   def test_adding_a_new_habit(self):
     fake_db = FakeDb()
-    def stubbed_method(prop, value):
+    def stubbed_method(prop, **kwargs):
       fake_db.method_called = True
-      fake_db.method_params.append(value)
+      fake_db.method_params.append(kwargs.get("name"))
     fake_db.add = stubbed_method
     tracker = Tracker(db=fake_db)
     tracker.add_habit("breathe")

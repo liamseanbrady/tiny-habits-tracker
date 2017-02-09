@@ -1,7 +1,7 @@
 import unittest
 import os.path
 from tracker import Tracker
-from tracker import DB
+from sqlite_adapter import SQLiteAdapter
 
 class EndToEndTest(unittest.TestCase):
   def test_creating_a_db_and_adding_a_habit(self):
